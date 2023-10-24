@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% block title %}MyTodo{% endblock title %}
+
+
+{% block content %}
+
+    <div class="container align-middle">
+        <h1>Welcome to MyTodo</h1>
+
+        {% if user.is_authenticated %}
+Hi {{ user.email }}!
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+{% endif %}
+
+    </div>
+
+{% endblock content %}
