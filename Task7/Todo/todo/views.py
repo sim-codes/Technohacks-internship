@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_list_or_404, redirect
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from .forms import TodoForm, UserRegistrationForm
 from django.views.generic import DetailView
 from django.views.generic.edit import UpdateView, DeleteView
@@ -18,6 +19,7 @@ class TodoUpdateView(LoginRequiredMixin, UpdateView):
 
 class TodoDeleteView(LoginRequiredMixin, DeleteView):
     model = Todo
+    success_url = reverse_lazy('todo_create_list')
     template_name = 'pages/todo_delete.html'
 
 
