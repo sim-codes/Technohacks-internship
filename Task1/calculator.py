@@ -1,8 +1,6 @@
 # Task Instruction
-# Create a basic calculator that can perform
-# basic arithmetic operations such as addition,
-# subtraction, multiplication, and division.using
-# functions
+# Create a basic calculator that can perform basic arithmetic operations such as addition,
+# subtraction, multiplication, and division using functions
 
 def add():
     '''A function that prompt user for 2 operands and perform addition'''
@@ -62,7 +60,6 @@ def mul_op():
 
 def main_menu():
     menu = '''
-
 ===============================================================
     Welcome selection any option to continue
     1. Addition
@@ -72,7 +69,6 @@ def main_menu():
     5. Multiple operations (+,/,*,-)
     6. Exit
 ===============================================================
-
 '''
     print(menu)
     opt = input('Enter choice: ')
